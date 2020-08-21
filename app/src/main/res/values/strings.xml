@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shop</string>
+    //Строковый массив для выпадающего списка
+    <string-array name = "catNames">
+        <item>Кыся</item>
+        <item>Кот</item>
+        <item>Кысюндрик</item>
+    </string-array>
+</resources>
