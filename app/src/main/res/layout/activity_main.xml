@@ -13,7 +13,7 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your nameee:"
+        android:hint="Your name:"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
@@ -48,20 +48,22 @@
         android:textSize="20dp"
         android:layout_below="@id/imageView"
         android:layout_gravity="end"
-        android:layout_marginEnd="30dp"/>
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"/>
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Light"
         android:spinnerMode="dropdown" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
+        android:id="@+id/imageGoods"
+        android:layout_width="130dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="7dp"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/cat" />
 <RelativeLayout
@@ -77,30 +79,32 @@
         android:textColor="@android:color/black"
         android:textSize="18dp"
         android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/priceText2"
+        android:id="@+id/priceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textStyle="bold"
         android:textColor="@android:color/black"
+        android:layout_alignParentStart="true"
         android:textSize="18dp"
         android:layout_below="@+id/priceText1"
-        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="23dp"/>
 
     <TextView
         android:id="@+id/priceText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$"
+        android:text="   $"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:textSize="18dp"
         android:layout_below="@+id/priceText1"
-        android:layout_marginStart="85dp"
+        android:layout_toRightOf="@id/priceText"
         android:layout_marginTop="23dp"/>
 
 
@@ -113,21 +117,26 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/decButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="minOne"
         android:background="@color/colorAccent"
+        android:layout_alignParentStart="true"
         android:layout_below="@id/quantityText1"
         android:layout_marginTop="13dp"
-        android:layout_marginStart="250dp"
-        android:text="+" />
+        android:layout_marginStart="245dp"
+        android:layout_marginLeft="245dp"
+        android:text="-" />
 
     <TextView
-        android:id="@+id/quantityText2"
+        android:id="@+id/quantityCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -135,18 +144,23 @@
         android:textColor="@android:color/black"
         android:textSize="18dp"
         android:layout_below="@id/quantityText1"
-        android:layout_marginTop="23dp"
-        android:layout_marginStart="310dp"/>
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/decButton"
+        android:layout_marginLeft="5dp"
+        />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/incButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="plusOne"
         android:background="@color/colorAccent"
         android:layout_below="@id/quantityText1"
         android:layout_marginTop="13dp"
-        android:layout_marginStart="330dp"
-        android:text="-" />
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/quantityCount"
+
+        android:text="+" />
 
 
 </RelativeLayout>
